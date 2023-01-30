@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Features</title>
+</head>
+<body>
+    <script>
+        //ES6-Features
+        //Let
+        let x=10;
+        console.log(x);//10
+
+        console.log(y);
+        let y=10;//uncaught Error
+
+        //var
+        var a=10;
+        console.log(a);//10
+
+        console.log(b);
+        let b=10;//undefined
+
+        //Template Literals
+        const message="Thank you so much my Friend";
+        console.log(message);
+
+        const msg="Thank You";
+        console.log(`${message} so much my Friend`);
+        console.log(msg);
+
+        //Promise
+        const person=true;
+        const p=new Promise((resolve,reject)=>{
+            if(person){
+                console.log("Success");
+            }
+            else{
+                console.log("Failed");
+            }
+        });
+        p.then((message)=>{
+            console.log("Then" + message);
+        }).catch((message)=>{
+            console.log("Catch" + message);
+        })
+
+        //Destructing
+        const l={x:k,y:r};
+        const m=[1,2,3]; //{k,r,undefined}
+        const {w,s,z}=l;
+        const [c,d,e,f]=m;//1,2,3,undefined
+
+        //Arrow Function
+        let num=[1,2,3,4,5];
+        let total=num.map((value)=>{
+            value * 2;
+        });
+        console.log(total);
+
+        yfuc=(a)=>10+a;
+        console.log(myfuc(10));
+
+        sum=(a,b)=>a+b+myfuc(5);
+        console.log(sum(10,10));
+
+        //Spread Operator
+        // use the array
+        const strsOne = ["veni","hii","hello"];
+        const strsTwo = ["mam","good","morning"];
+        const strsCombined = [...strsOne, ...strsTwo,56,78];//["vani","hii","hello","mam","good","morning",56,78]
+
+        //Reset Operator
+        // use the Func
+        function myFun(...args){
+            console.log(args);
+        }
+        let value=myFun(1,2,3,4);//[1,2,3,4]
+
+        //class keyword
+        class Person {
+        constructor(name) {
+            this.name = name;
+        }
+        getName() {
+            return this.name;
+        }
+        }
+
+       // const obj=new Main();
+       // obj.getData();
+       // const obj1=new child();
+       // bbj1.getName();
+
+        // import get,{name} from "./veni.js";
+        // console.log(name,get());
+
+        // function param(parameter1,parameter2,parameter3){
+        //return code black
+        // }
+        
+    </script>
+</body>
+</html>
